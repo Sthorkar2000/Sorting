@@ -1,0 +1,42 @@
+#Program to sort and arrange the array elements in ascending order.
+
+PROGRAM:-
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    #Accepting user input----------------
+    int n;
+    cin>>n;
+    int arr[n];
+    int i;
+    int temp;
+    
+    #Using For loop to accept the array elements------------
+    for(i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    
+    #Comparing the array elements and swapping it accordingly-------------
+    for(i=0;i<n-1;i++){
+        for(int j=i+1;j<n;j++){
+            if(arr[j]<arr[i]){
+            temp = arr[j];
+            arr[j]=arr[i];
+            arr[i]=temp;
+            
+            } 
+        }
+        
+    }
+    
+    #Print the array elements in ascending array----------------
+    for(i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+
+    cout<<endl;
+}
+
